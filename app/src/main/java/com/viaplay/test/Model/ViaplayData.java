@@ -1,9 +1,11 @@
-package com.viaplay.test.Model;
+package com.viaplay.test.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ViaplayData  {
+import io.realm.RealmObject;
+
+public class ViaplayData extends RealmObject {
 
     @SerializedName("title")
     @Expose
@@ -13,6 +15,11 @@ public class ViaplayData  {
     @Expose
     private String description;
 
+    private String sectionId;
+
+    public String getSectionId() {
+        return sectionId;
+    }
 
     public String getTitle() {
         return title;
@@ -22,6 +29,10 @@ public class ViaplayData  {
         return description;
     }
 
+
+    public void setSectionId(String sectionId) {
+        this.sectionId = sectionId;
+    }
 
     public void setTitle(String title) {
         this.title = title;

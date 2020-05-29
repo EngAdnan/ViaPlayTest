@@ -1,4 +1,4 @@
-package com.viaplay.test.Model;
+package com.viaplay.test.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -14,6 +14,7 @@ public class ViaplayResponse {
     public List<ViaplaySections> getSections() {
         return sections.sectionsList;
     }
+
     public void setSections(List<ViaplaySections> sectionsList) {
         this.sections.sectionsList = sectionsList;
     }

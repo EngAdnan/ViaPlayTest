@@ -1,16 +1,12 @@
-package com.viaplay.test.Service;
-
-import com.viaplay.test.Model.ViaplayData;
-import com.viaplay.test.Model.ViaplaySections;
+package com.viaplay.test.service;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiCallService {
 
-    private  static String API_BASE_URL = "https://content.viaplay.se/";
-
     private static <T> T builder(Class<T> endpoint) {
+        String API_BASE_URL = "https://content.viaplay.se/";
         return new Retrofit.Builder()
                 .baseUrl(API_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -21,7 +17,6 @@ public class ApiCallService {
     public static Api fetchData() {
         return builder(Api.class);
     }
-
 
 
 }
