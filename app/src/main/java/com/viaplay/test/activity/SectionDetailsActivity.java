@@ -62,7 +62,7 @@ public class SectionDetailsActivity extends AppCompatActivity {
                         selectedSectionDetails.setSectionId(sectionId);
 
                         realm.beginTransaction();
-                        realm.copyToRealm(selectedSectionDetails);
+                        realm.copyToRealmOrUpdate(selectedSectionDetails);
                         realm.commitTransaction();
                     });
                 }
