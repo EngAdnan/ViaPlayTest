@@ -24,6 +24,7 @@ public class ViaplaySections extends RealmObject {
     private String href;
 
 
+
     public String getId() {
         return id;
     }
